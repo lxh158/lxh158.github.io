@@ -20,25 +20,27 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="blog">
-<meta property="og:type" content="website">
+<meta name="description" content="16-JSON、AJAX、i18n1、什么是JSON？JSON（JavaScript Object Notation）是一种轻量级的数据交换格式。易于人阅读和编写。同时也易于机器解析和生成。JSON采用完全独立于语言的文本格式，而且很多语言都提供了对json的支持（包括C，C++，C#，Java，JavaScript，Perl，Python等）。这样就使得JSON成为理想的数据交换格式。 json">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2021/09/22/16_JSON%E3%80%81AJAX%E3%80%81i18n/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="16-JSON、AJAX、i18n1、什么是JSON？JSON（JavaScript Object Notation）是一种轻量级的数据交换格式。易于人阅读和编写。同时也易于机器解析和生成。JSON采用完全独立于语言的文本格式，而且很多语言都提供了对json的支持（包括C，C++，C#，Java，JavaScript，Perl，Python等）。这样就使得JSON成为理想的数据交换格式。 json">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-22T01:38:44.256Z">
+<meta property="article:modified_time" content="2021-09-22T01:38:06.232Z">
 <meta property="article:author" content="lxh">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/09/22/16_JSON%E3%80%81AJAX%E3%80%81i18n/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/09/22/16_JSON%E3%80%81AJAX%E3%80%81i18n/","path":"2021/09/22/16_JSON、AJAX、i18n/","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexo</title>
+<title> | Hexo</title>
   
 
 
@@ -104,7 +106,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -117,6 +119,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#16-JSON%E3%80%81AJAX%E3%80%81i18n"><span class="nav-number">1.</span> <span class="nav-text">16-JSON、AJAX、i18n</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFJSON%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">1、什么是JSON？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E3%80%81JSON%E5%9C%A8JavaScript%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8%E3%80%82"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1、JSON在JavaScript中的使用。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1%E3%80%81json%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">1.1.1、json的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2%E3%80%81json%E7%9A%84%E8%AE%BF%E9%97%AE"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">1.1.2、json的访问</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-3%E3%80%81json%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">1.1.3、json的两个常用方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E3%80%81JSON%E5%9C%A8java%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2、JSON在java中的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-1%E3%80%81javaBean%E5%92%8Cjson%E7%9A%84%E4%BA%92%E8%BD%AC"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1.2.1、javaBean和json的互转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-2%E3%80%81List%E5%92%8Cjson%E7%9A%84%E4%BA%92%E8%BD%AC"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">1.2.2、List和json的互转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-3%E3%80%81map%E5%92%8Cjson%E7%9A%84%E4%BA%92%E8%BD%AC"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">1.2.3、map和json的互转</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -168,16 +171,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/22/16_JSON%E3%80%81AJAX%E3%80%81i18n/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -190,9 +194,9 @@
       <meta itemprop="name" content="Hexo">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/09/22/16_JSON%E3%80%81AJAX%E3%80%81i18n/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -216,7 +220,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="16-JSON、AJAX、i18n"><a href="#16-JSON、AJAX、i18n" class="headerlink" title="16-JSON、AJAX、i18n"></a>16-JSON、AJAX、i18n</h1><h2 id="1、什么是JSON？"><a href="#1、什么是JSON？" class="headerlink" title="1、什么是JSON？"></a>1、什么是JSON？</h2><p><strong>JSON</strong>（JavaScript Object Notation）是一种轻量级的数据交换格式。易于人阅读和编写。同时也易于机器解析和生成。JSON采用完全独立于语言的文本格式，而且很多语言都提供了对json的支持（包括C，C++，C#，Java，JavaScript，Perl，Python等）。这样就使得JSON成为理想的数据交换格式。</p>
+        <h1 id="16-JSON、AJAX、i18n"><a href="#16-JSON、AJAX、i18n" class="headerlink" title="16-JSON、AJAX、i18n"></a>16-JSON、AJAX、i18n</h1><h2 id="1、什么是JSON？"><a href="#1、什么是JSON？" class="headerlink" title="1、什么是JSON？"></a>1、什么是JSON？</h2><p><strong>JSON</strong>（JavaScript Object Notation）是一种轻量级的数据交换格式。易于人阅读和编写。同时也易于机器解析和生成。JSON采用完全独立于语言的文本格式，而且很多语言都提供了对json的支持（包括C，C++，C#，Java，JavaScript，Perl，Python等）。这样就使得JSON成为理想的数据交换格式。</p>
 <p>json是一种轻量级的数据交换格式。</p>
 <p>轻量级指的是跟xml做比较。</p>
 <p>数据交换指的是客户端和服务器之间业务数据的传递格式。</p>
@@ -284,7 +288,6 @@
 
 
 
-      
     </div>
 
     
@@ -292,92 +295,22 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/18/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="lxh">
-      <meta itemprop="description" content="blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/09/18/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">java</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-09-18 00:00:00 / 修改时间：14:45:26" itemprop="dateCreated datePublished" datetime="2021-09-18T00:00:00+08:00">2021-09-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>java</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/09/18/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/09/18/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="prev" title="java">
+                  <i class="fa fa-chevron-left"></i> java
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
+
 
 
 
